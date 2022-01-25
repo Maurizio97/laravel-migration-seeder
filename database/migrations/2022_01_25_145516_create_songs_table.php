@@ -15,6 +15,8 @@ class CreateSongsTable extends Migration
     {
         Schema::create('songs', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 50);
+            $table->date('date');
             $table->timestamps();
         });
     }
