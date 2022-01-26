@@ -16,8 +16,8 @@ class CreateAlbumsTable extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
             $table->string('title',60);
-            $table->integer('n_songs');
-            $table->integer('sold');
+            $table->integer('n_songs') -> default(0);
+            $table->integer('sold') -> default(0);
             $table->string('record_company', 100);
             $table->string('genres', 60);
             $table->date('publication_date');
