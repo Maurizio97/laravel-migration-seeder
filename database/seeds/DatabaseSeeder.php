@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -13,6 +12,10 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             SongSeeder::class,
+            ArtistSeeder::class,
+            AlbumSeeder::class,
         ]);
     }
 }
+
+// composer dump-autoload

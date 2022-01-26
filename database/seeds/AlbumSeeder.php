@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Song;
-
-class SongSeeder extends Seeder
+use App\Album;
+class AlbumSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +11,6 @@ class SongSeeder extends Seeder
      */
     public function run()
     {
-        factory(Song::class, 50) -> create();
+        factory(Album::class, 100) -> create();
     }
 }
