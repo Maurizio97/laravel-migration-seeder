@@ -15,9 +15,12 @@ class CreateArtistsTable extends Migration
     {
         Schema::create('artists', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 30);
+            $table->string('name', 60);
+            $table->string('surname', 60);
             $table->tinyInteger('age');
-            $table->tinyInteger('albums-number');
+            $table->date('date_of_birth');
+            $table->string('stage_name', 60)->unique();
+            $table->string('record_company', 100);
             $table->timestamps();
         });
     }
